@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1200px">
+
+<!-- Header -->
+<header class="w3-panel w3-center" style="padding-top: 20px">
+  <img src="/images/BEA Logo Mid.png" alt="BEA Logo">
+  <h1>Bonneville Education Association</h1>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="contactUs.html" class="w3-bar-item w3-button">Contact Us</a>
+      <a href="buildingReps.html" class="w3-bar-item w3-button w3-red">Building Reps</a>
+      <a href="https://www.mynea360.org/s/join-now" class="w3-bar-item w3-button">Join Today!</a>
+    </div>
+  </div>
+</header>
+
+<!-- End Page Content -->
+</div>
+
+<!-- About Section -->
+<div class="w3-container w3-center w3-padding-64" id="about">
+  <h3 class="w3-text-red">Building Rep Lookup</h3>
+   <form name="dropForm">
+      <select class="w3-select w3-large" style="width: 30%;" name="dropSelect" onchange="showDropInfo()">
+        <optgroup label="Elementary Schools">
+            <option value="" disabled selected>Select a School:</option>
+            <option value="Name: Sam Harris<br>Phone: 406-202-5174">Ammon Elementary School</option>
+            <option value="MARK">Bridgewater Elementary School</option>
+            <option value="SAM">Cloverdale Elementary School</option>
+            <option value="BRADY">Discovery Elementary School</option>
+            <option value="KATE">Fairview Elementary School</option>
+            <option value="SAM2">Falls Valley Elementary School</option>
+            <option value="LEEROY">Hillview Elementary School</option>
+            <option value="BRITTANY">Iona Elementary School</option>
+            <option value="">Mountain Valley Elementary School</option>
+            <option value="J">Rimrock Elementary School</option>
+            <option value="K">Summit Hills Elementary School</option>
+            <option value="L">Tiebreaker Elementary School</option>
+            <option value="C">Ucon Elementary School</option>
+            <option value="C">Wooland Hills Elementary School</option>
+        </optgroup>
+        <optgroup label="Middle Schools">
+            <option value="A">Black Canyon Middle School</option>
+            <option value="C">Rocky Mountain Middle School</option>
+            <option value="C">Sandcreek Middle School</option>
+        </optgroup>
+        <optgroup label="High Schools">
+            <option value="A">Bonnville High School</option>
+            <option value="B">HillCrest High School</option>
+            <option value="B">Lincol High School</option>
+            <option value="B">Techical Careers High School</option>
+            <option value="B">Thunder Ridge High School</option>
+        </optgroup>
+        <optgroup label="Online Schools">
+            <option value="B">Bonneville Online High School</option>
+            <option value="B">Bonneville Online Elementary School</option>
+        </optgroup>
+      </select>
+   </form>
+   <div class="w3-padding-32">
+    <h4 id="Name"></h4>
+   </div>
+  </div>
+
+  
+
+    <script>
+      function showDropInfo() {
+         var sT = dropForm.dropSelect;
+         var pF = document.getElementById('Name');
+         pF.innerHTML = (sT[sT.selectedIndex].value);
+      }
+   </script>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding w3-black w3-bottom w3-center w3-large"> 
+  <p>Bonneville Education Association | 2023</p>
+</footer>
+
+</body>
+</html>
